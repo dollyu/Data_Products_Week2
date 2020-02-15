@@ -1,0 +1,28 @@
+---
+title: "My 1st Leaflet Map"
+author: "Dorothea L. Ugi"
+date: "2/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The source code is available at [GitHub](https://github.com/dollyu/Data_Products_Week2). 
+[Click here!](https://github.com/dollyu/Data_Products_Week2)
+
+## My Leaflet Map
+Create leaflet map object.
+```{r}
+library(dplyr)
+library(leaflet)
+my_map <- leaflet() %>% addTiles()
+```
+
+Add marker to the map and display map.
+```{r}
+my_map %>%
+   addTiles() %>%
+   addMarkers(lat=12.5665, lng=-70.0475, popup = "Riu Palace")
+```
